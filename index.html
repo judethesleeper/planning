@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outing Plan</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+    <div id="name-container">
+        <h1>Who are you?</h1>
+        <input type="text" id="name" placeholder="Enter your name">
+        <button onclick="askName()">Submit</button>
+    </div>
+
+    <div id="options" style="display: none;">
+        <h2>Yay! It's you!</h2>
+        <p>Would you like to go out with me?</p>
+        <button onclick="showPlaces()">Yes</button>
+        <button onclick="noGo()">No</button>
+    </div>
+
+    <div id="places" style="display: none;">
+        <h3>Where do you want to go?</h3>
+        <button onclick="choosePlace('Beach')">Beach</button>
+        <button onclick="choosePlace('Mall')">Mall</button>
+        <button onclick="choosePlace('Aquarium/Zoo')">Aquariums and Zoo</button>
+    </div>
+
+    <div id="beach-options" style="display: none;">
+        <h3>You have three options for the beach.</h3>
+        <button onclick="showBeach('Koh Larn')">Koh Larn</button>
+        <button onclick="showBeach('Bang Saen Beach')">Bang Saen Beach</button>
+        <button onclick="showBeach('Pranburi Beach')">Pranburi Beach</button>
+    </div>
+
+    <div id="mall-options" style="display: none;">
+        <h3>You have three mall options.</h3>
+        <button onclick="showMall('Siam Paragon')">Siam Paragon</button>
+        <button onclick="showMall('CentralWorld')">CentralWorld</button>
+        <button onclick="showMall('Mega Bangna')">Mega Bangna</button>
+    </div>
+
+    <div id="zoo-options" style="display: none;">
+        <h3>You have two options for the aquarium and zoo.</h3>
+        <button onclick="showZoo('SEA LIFE Bangkok Ocean World')">SEA LIFE Bangkok Ocean World</button>
+        <button onclick="showZoo('Safari World')">Safari World</button>
+    </div>
+
+    <script src="script.js"></script> <!-- External JS file -->
+</body>
+</html>

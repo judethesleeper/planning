@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Use the same CSS file -->
+</head>
+<body>
+    <h1>Admin Panel</h1>
+    <h2>User Selection Details</h2>
+
+    <p><strong>Name:</strong> <span id="userName">Loading...</span></p>
+    <p><strong>Accepted Invitation:</strong> <span id="userChoice">Loading...</span></p>
+    <p><strong>Chosen Place:</strong> <span id="chosenPlace">Loading...</span></p>
+    <p><strong>Chosen Destination:</strong> <span id="chosenDestination">Loading...</span></p>
+    <p><strong>Chosen Date:</strong> <span id="chosenDate">Loading...</span></p>
+
+    <button onclick="clearData()">Clear Data</button>
+
+    <script>
+        // Retrieve and display stored data
+        document.getElementById('userName').textContent = localStorage.getItem('userName') || "No data";
+        document.getElementById('userChoice').textContent = localStorage.getItem('userChoice') || "No response";
+        document.getElementById('chosenPlace').textContent = localStorage.getItem('chosenPlace') || "Not chosen";
+        document.getElementById('chosenDestination').textContent = localStorage.getItem('chosenDestination') || "Not chosen";
+        document.getElementById('chosenDate').textContent = localStorage.getItem('chosenDate') || "Not chosen";
+
+        function clearData() {
+            localStorage.clear();
+            alert("All data cleared!");
+            location.reload();
+        }
+    </script>
+</body>
+</html>
